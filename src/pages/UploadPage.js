@@ -93,7 +93,7 @@ export default function UploadPage() {
       uploadFormData.append('paperSize', formData.paperSize);
       uploadFormData.append('comments', formData.comments);
 
-      const response = await axios.post('/api/upload', uploadFormData, {
+      await axios.post('/api/upload', uploadFormData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
